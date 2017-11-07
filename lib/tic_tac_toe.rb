@@ -16,7 +16,7 @@ class TicTacToe
   end
 
   def position_taken?(index)
-    !(board[index].nil? || board[index] == " ")
+    !(@board[index].nil? || @board[index] == " ")
   end
 
   def won?
@@ -63,7 +63,7 @@ class TicTacToe
   end
 
   def valid_move?(index)
-    index.between?(0, 8) && !position_taken?(board, index)
+    index.between?(0, 8) && !position_taken?(@board, index)
   end
 
   def display_board

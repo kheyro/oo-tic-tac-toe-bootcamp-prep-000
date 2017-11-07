@@ -59,7 +59,7 @@ class TicTacToe
   end
 
   def current_player
-    turn_count(@board).odd? ? "O" : "X"
+    turn_count.odd? ? "O" : "X"
   end
 
   def valid_move?(index)

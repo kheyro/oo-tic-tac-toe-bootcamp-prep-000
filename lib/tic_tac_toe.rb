@@ -38,8 +38,8 @@ class TicTacToe
     if !valid_move?(index)
       turn(board)
     end
-    move(board, index, current_player(board))
-    display_board(board)
+    move(board, index, current_player)
+    display_board
   end
 
   def draw?

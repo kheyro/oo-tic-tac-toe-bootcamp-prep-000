@@ -26,7 +26,7 @@ class TicTacToe
   end
 
   def full?
-    board.all? do |i|
+    @board.all? do |i|
       !(i == " " || i == nil)
     end
   end

@@ -47,11 +47,11 @@ class TicTacToe
   end
 
   def over?
-    draw?(board) || won?(board)
+    draw? || won?
   end
 
   def winner
-    won?(board) ? board[won?(board)[0]] : nil
+    won? ? @board[won?[0]] : nil
   end
 
   def turn_count

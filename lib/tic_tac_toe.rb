@@ -35,7 +35,7 @@ class TicTacToe
     puts "Please enter 1-9:"
     index = gets.strip
     index = input_to_index(index)
-    if !valid_move?(board, index)
+    if !valid_move?(index)
       turn(board)
     end
     move(board, index, current_player(board))
@@ -55,11 +55,11 @@ class TicTacToe
   end
 
   def turn_count
-    board.count{|token| token=="X" || token == "O"}
+    @board.count{|token| token=="X" || token == "O"}
   end
 
   def current_player
-    turn_count(board).odd? ? "O" : "X"
+    turn_count(@board).odd? ? "O" : "X"
   end
 
   def valid_move?(index)
